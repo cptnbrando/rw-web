@@ -1,33 +1,67 @@
 @import "~sakura-js/dist/sakura.min.css";
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap');
 
 .window {
-	width: 100%;
-	height: 100%;
+	width: inherit;
+	height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    #front {
+        flex: 1 0 auto;
+    }
+
+    navbar {
+        z-index: 15;
+    }
 }
 
-#front {
-	display: flex;
-	align-items: flex-end;
-	justify-content: space-between;
+#home {
+    position: absolute;
+    width: 100vw;
+    height: 87%;
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 
-	img {
+    img {
 		width: auto;
-		height: 80vh;
+		height: 100%;
 	}
-
+    
 	h1 {
-		font-family: "Dancing Script", cursive;
-		font-size: 6rem;
+        align-self: flex-end;
+        font-family: 'Fleur De Leah', cursive;
+        background: -webkit-linear-gradient(20deg, #FF033E, #861322);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent; 
+        -moz-text-fill-color: transparent;
+        background-size: 100%;
+		font-size: 8rem;
 		margin-left: 2rem;
-		margin-bottom: 1rem;
+        padding-right: 1rem;
+		margin-bottom: 3rem;
 	}
+}
+
+.ground {
+    position: absolute;
+	width: 100vw;
+    height: 87%;
+    overflow: hidden;
 }
 
 #shapes {
-	position: absolute;
-	z-index: -5;
-	width: 100vw;
+	z-index: 1;
+}
+
+#sakuraLeaves {
+	z-index: 11;
 }
 
 #triangle {
@@ -41,7 +75,5 @@
 }
 
 .retroshadow {
-	color: #202020;
-	letter-spacing: 0.05em;
-	text-shadow: 4px 4px 0px #ebeaea, 7px 7px 0px rgba(0, 0, 0, 0.2);
+	text-shadow: unset;
 }
