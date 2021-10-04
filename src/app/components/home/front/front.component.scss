@@ -77,3 +77,24 @@
 .retroshadow {
 	text-shadow: unset;
 }
+
+@media screen and (max-width: 800px) {
+    #home {
+        flex-direction: column;
+        overflow-x: hidden;
+        justify-content: center;
+
+        h1 {
+            // text-align: left;
+            // justify-self: flex-end;
+            // font-size: 3rem;
+            // padding-left: 10px;
+            display: none;
+        }
+
+        img {
+            position: absolute;
+            text-align: center;
+        }
+    }
+}

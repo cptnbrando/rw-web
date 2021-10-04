@@ -2,18 +2,17 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
 import { NavbarModule } from '../navbar/navbar.module';
-import { FrontComponent } from './front/front.component';
+import { FrontModule } from 'src/app/components/home/front/front.module';
 
 
 
 @NgModule({
   declarations: [
-    HomeComponent,
-    FrontComponent
+    HomeComponent
   ],
   imports: [
     CommonModule,
-    NavbarModule
+    FrontModule
   ],
   exports: [
     HomeComponent

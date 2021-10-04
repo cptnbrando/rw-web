@@ -8,29 +8,17 @@ declare var Sakura: any;
 	styleUrls: ['./front.component.scss'],
 })
 export class FrontComponent implements OnInit {
-    quotes: string[] = [
-        "This is the generation",
-        "We will rise together",
-        "Stand for God",
-        "Bring God's light",
-        "The lost will be found",
-        "The power is ours"
-    ];
 
 	constructor() {}
 
+    sakura: any;
+
 	ngOnInit(): void {
         this.initSakura();
-        this.changeQuote();
 	}
 
-    changeQuote(): void {
-        const quote = document.querySelector("#quote");
-        if(quote) quote.innerHTML = this.quotes[Math.floor(Math.random()*this.quotes.length)];
-    }
-
     initSakura(): void {
-        const sakura = new Sakura('#sakuraLeaves', {
+        this.sakura = new Sakura('#sakuraLeaves', {
 			maxSize: 50,
 			minSize: 20,
             colors: [

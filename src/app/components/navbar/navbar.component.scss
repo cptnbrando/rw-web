@@ -33,3 +33,14 @@ nav {
     }
 }
 
+@media screen and (max-width: 800px) {
+    nav {
+        .retroshadow {
+            font-size: 2rem;
+        }
+        .links {
+            display: none;
+        }
+    }
+}
+

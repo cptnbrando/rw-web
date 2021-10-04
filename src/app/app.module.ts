@@ -5,18 +5,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarModule } from './components/navbar/navbar.module';
 import { HomeModule } from './components/home/home.module';
-import { QuoteComponent } from './quote/quote.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    QuoteComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HomeModule,
-    NavbarModule
+    NavbarModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
