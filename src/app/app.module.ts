@@ -6,17 +6,23 @@ import { AppComponent } from './app.component';
 import { NavbarModule } from './components/navbar/navbar.module';
 import { HomeModule } from './components/home/home.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ContactComponent } from './components/contact/contact.component';
+import { DonateComponent } from './components/donate/donate.component';
+import { LiveModule } from './components/live/live.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ContactComponent,
+    DonateComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HomeModule,
     NavbarModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    LiveModule
   ],
   providers: [],
   bootstrap: [AppComponent]

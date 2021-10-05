@@ -5,12 +5,19 @@
 
 .window {
 	width: inherit;
-	height: 100vh;
+	height: inherit;
     display: flex;
     flex-direction: column;
+    max-height: 100vh;
+    overflow: hidden;
 
     #front {
-        flex: 1 0 auto;
+        flex: 1;
+        height: inherit;
+        display: flex;
+        align-items: stretch;
+        max-height: 100vh;
+        overflow: hidden;
     }
 
     navbar {
@@ -19,17 +26,30 @@
 }
 
 #home {
-    position: absolute;
-    width: 100vw;
-    height: 87%;
+    // position: absolute;
     z-index: 10;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-end;
+
+    div {
+        flex: 1;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        overflow: hidden;
+        justify-content: flex-end;
+    }
+
+    div:first-child {
+        justify-content: flex-start;
+    }
 
     img {
-		width: auto;
-		height: 100%;
+        height: 100%;
+		width: 100%;
+        flex: 0.8;
 	}
     
 	h1 {
@@ -42,7 +62,7 @@
         -webkit-text-fill-color: transparent; 
         -moz-text-fill-color: transparent;
         background-size: 100%;
-		font-size: 8rem;
+		font-size: 7rem;
 		margin-left: 2rem;
         padding-right: 1rem;
 		margin-bottom: 3rem;
@@ -51,9 +71,8 @@
 
 .ground {
     position: absolute;
-	width: 100vw;
-    height: 87%;
-    overflow: hidden;
+    top: 0px;
+    bottom: 0px;
 }
 
 #shapes {
@@ -62,6 +81,9 @@
 
 #sakuraLeaves {
 	z-index: 11;
+    width: 100%;
+    top: 10px;
+    overflow: hidden;
 }
 
 #triangle {
@@ -81,20 +103,14 @@
 @media screen and (max-width: 800px) {
     #home {
         flex-direction: column;
-        overflow-x: hidden;
         justify-content: center;
 
-        h1 {
-            // text-align: left;
-            // justify-self: flex-end;
-            // font-size: 3rem;
-            // padding-left: 10px;
-            display: none;
+        div {
+            justify-content: center;
         }
 
-        img {
-            position: absolute;
-            text-align: center;
+        div:first-child {
+            display: none;
         }
     }
 }
