@@ -26,12 +26,21 @@ nav {
         margin: 15px;
     }
 
+    li {
+        transition: .1s;
+        &:hover {
+            border-bottom: solid;
+        }
+    }
+
     a {
         color: black;
         text-decoration: none;
         font-family: 'Montserrat', sans-serif;
+        cursor: pointer;
     }
 }
+
 
 @media screen and (max-width: 800px) {
     nav {

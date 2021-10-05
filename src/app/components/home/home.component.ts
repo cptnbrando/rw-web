@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faFacebookSquare, faInstagramSquare, faYoutubeSquare } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+    faFacebook = faFacebookSquare;
+    faInstagram = faInstagramSquare;
+    faYoutube = faYoutubeSquare;
 
-  ngOnInit(): void {
-  }
+    constructor() { }
+
+    ngOnInit(): void {
+    }
 
 }

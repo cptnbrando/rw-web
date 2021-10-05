@@ -1,0 +1,15 @@
+#livestream, #video {
+    width: 100%;
+    min-height: 50vh;
+}
+
+#video {
+    border: solid;
+    margin: 30px;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

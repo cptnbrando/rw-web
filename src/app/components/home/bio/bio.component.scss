@@ -39,7 +39,9 @@
         justify-content: space-around;
         align-items: center;
         flex: auto;
-        padding-bottom: 25px;
+        padding-bottom: 50px;
+        transition: .6s;
+        cursor: pointer;
 
         div {
             width: 75%;
@@ -52,6 +54,11 @@
                 max-width: 100%;
                 max-height: 100%;
             }
+        }
+
+        &:hover {
+            padding-bottom: 75px;
+            padding-top: 75px;
         }
     }
 }

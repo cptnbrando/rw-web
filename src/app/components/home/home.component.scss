@@ -1,18 +1,8 @@
 #window {
-    // scroll-snap-type: y mandatory;
-    // height: 100vh;
-    // width: 100vw;
-    
     section {
-        border-top: solid;
         height: 100vh;
         width: inherit;
         background-color: white;
-        // scroll-snap-align: start;
-
-        &:first-of-type {
-            padding-top: 0px;
-        }
     }
 
     .panel {
@@ -36,3 +26,20 @@
 .background:first-of-type {
     top: 100vh;
 }
+
+footer {
+    border-top: solid;
+    position: relative;
+    z-index: 10;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    fa-icon {
+        margin-left: 10px;
+    }
+}
+

@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ContactComponent } from './components/contact/contact.component';
 import { DonateComponent } from './components/donate/donate.component';
 import { LiveModule } from './components/live/live.module';
+import { LivestreamComponent } from './components/live/livestream/livestream.component';
 
 @NgModule({
   declarations: [

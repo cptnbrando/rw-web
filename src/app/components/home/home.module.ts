@@ -4,6 +4,7 @@ import { HomeComponent } from './home.component';
 import { FrontModule } from 'src/app/components/home/front/front.module';
 import { BioComponent } from './bio/bio.component';
 import { FeedComponent } from './feed/feed.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 
@@ -15,7 +16,8 @@ import { FeedComponent } from './feed/feed.component';
   ],
   imports: [
     CommonModule,
-    FrontModule
+    FrontModule,
+    FontAwesomeModule
   ],
   exports: [
     HomeComponent

@@ -33,7 +33,7 @@ export class QuoteComponent implements OnInit, OnDestroy {
 	constructor() {}
 
     ngOnDestroy(): void {
-        this.timer.unsubscribe();
+        // this.timer.unsubscribe();
     }
 
 	ngOnInit(): void {
