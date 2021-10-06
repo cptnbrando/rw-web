@@ -1,8 +1,6 @@
-<div class="background">
-
-</div>
+<div class="background"></div>
 <div id="bio">
-    <div class="item" (click)="expand(1)" *ngIf="exNum === 0">
+    <div class="item" (click)="expand(1)" *ngIf="exNum === 0" @fadePadding>
         <div class="body">
             <div class="head">
                 <h1>Miracle Life Ministries</h1>
@@ -12,7 +10,7 @@
             </div>
         </div>
     </div>
-    <div class="ex flex" *ngIf="exNum === 1">
+    <div class="ex flex" *ngIf="exNum === 1" @fadeSlide>
         <div>
             <div class="back">
                 <h2>Go back</h2>
@@ -28,7 +26,7 @@
         </div>
     </div>
 
-    <div class="item reverse" (click)="expand(2)" *ngIf="exNum === 0">
+    <div class="item reverse" (click)="expand(2)" *ngIf="exNum === 0" @fadePadding>
         <div class="body">
             <div class="head flex">
                 <h1>Activist For Peace</h1>
@@ -38,11 +36,11 @@
             </div>
         </div>
     </div>
-    <div class="ex flex" *ngIf="exNum === 2" (click)="expand(0)">
+    <div class="ex flex" *ngIf="exNum === 2" @fadeSlide>
         <div>
-            <div class="back">
+            <div class="back" (click)="expand(0)">
                 <h2>Go back</h2>
-                <fa-icon [icon]="faX" (click)="expand(0)" size="4x"></fa-icon>
+                <fa-icon [icon]="faX" size="4x"></fa-icon>
             </div>
             <h1>Community Activist and Organizer</h1>
             <p>
@@ -62,12 +60,16 @@
                 stricken by anger, grief and tragedy.
             </p>
             <div class="image">
-                <img src="../../../../assets/img/portrait2.png">
+                <video [autoplay]="true" [muted]="true" [loop]="true" class="vid" [controls]="true">
+                    <source src="../../../../assets/vid/fox.webm" type="video/webm">
+                    <source src="../../../../assets/vid/fox.mp4" type="video/mp4">
+                    Sorry, your browser doesn't support embedded videos.
+                </video>
             </div>
         </div>
     </div>
 
-    <div class="item" (click)="expand(3)" *ngIf="exNum === 0">
+    <div class="item" (click)="expand(3)" *ngIf="exNum === 0" @fadePadding>
         <div class="body">
             <div class="head">
                 <h1>Leader Of People</h1>
@@ -77,7 +79,7 @@
             </div>
         </div>
     </div>
-    <div class="ex flex" *ngIf="exNum === 3">
+    <div class="ex flex" *ngIf="exNum === 3" @fadeSlide>
         <div>
             <div class="back">
                 <h2>Go back</h2>

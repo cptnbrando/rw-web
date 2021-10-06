@@ -24,6 +24,8 @@ nav {
         font-family: "Dancing Script", cursive;
         font-size: 3rem;
         margin: 15px;
+        cursor: pointer;
+        transition: .2s;
     }
 
     li {
@@ -34,21 +36,144 @@ nav {
     }
 
     a {
-        color: black;
+        color: rgba($color: #000000, $alpha: 0.1);
         text-decoration: none;
         font-family: 'Montserrat', sans-serif;
         cursor: pointer;
+        transition: 0.4s ease-in-out;
+    }
+
+    &:hover {
+        .retroshadow {
+            animation: pop .5s;
+            font-size: 3.2rem;
+            text-shadow: 4px 4px 0px #ff8383c9, 7px 7px 0px rgba(0, 0, 0, 0.2);
+        }
+
+        a {
+            color: rgba($color: #000000, $alpha: 1);
+        }
+        
+        .right li {
+            animation: shuffleRight 1.5s;
+        }
+
+        .left li {
+            animation: shuffleLeft 1.5s;
+        }
+    }
+
+    #button {
+        display: none;
+        flex: 0.2;
+        border: solid;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+        cursor: pointer;
+    }
+
+    #logo {
+        min-width: 35%;
     }
 }
 
+.menu {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100vw;
+    position: absolute;
+    top: 13vh;
+    bottom: 0px;
+    z-index: 20;
 
-@media screen and (max-width: 800px) {
+    ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    a {
+        color: white;
+    }
+}
+
+.red {
+    text-shadow: 2px 2px 0px #ff8383c9, 7px 7px 0px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes pop {
+    0% {
+        font-size: 3rem;
+    }
+    20% {
+        font-size: 3.2rem;
+    }
+    50% {
+        font-size: 3.5rem;
+    }
+    100% {
+        font-size: 3.2rem;
+    }
+}
+
+@keyframes shuffleRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-50vw);
+    }
+    30% {
+        opacity: 0.2;
+        transform: translateX(50%);
+    }
+    60% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes shuffleLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(50vw);
+    }
+    30% {
+        opacity: 0.2;
+        transform: translateX(-50%);
+    }
+    60% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@media screen and (max-width: 900px) {
     nav {
         .retroshadow {
             font-size: 2rem;
         }
         .links {
             display: none;
+        }
+
+        &:hover {
+            .retroshadow {
+                animation: none;
+                font-size: 2.5rem;
+            }
+            
+            li {
+                animation: none;
+            }
+        }
+
+        #logo {
+            justify-content: flex-start;
+        }
+
+        #button {
+            display: flex;
         }
     }
 }

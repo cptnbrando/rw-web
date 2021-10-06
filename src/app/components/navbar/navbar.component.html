@@ -1,15 +1,30 @@
 <nav>
 	<ul>
-		<div class="links">
+		<div class="links left">
 			<li><a routerLink=""><h2>Home</h2></a></li>
 			<li><a routerLink="/donate" routerLinkActive="active"><h2>Donate</h2></a></li>
 		</div>
-		<div>
-			<h1 class="retroshadow">Ralanda Wells</h1>
+		<div id="logo">
+			<h1 class="retroshadow white" *ngIf="!menu">Ralanda Wells</h1>
+			<h1 class="retroshadow red" *ngIf="menu">Ralanda Wells</h1>
 		</div>
-		<div class="links">
+		<div class="links right">
 			<li><a routerLink="/live" routerLinkActive="active"><h2>Live</h2></a></li>
 			<li><a routerLink="/contact" routerLinkActive="active"><h2>Contact</h2></a></li>
 		</div>
+
+        <div id="button" (click)="menu = !menu">
+            <fa-icon [icon]="faBars" size="2x" *ngIf="!menu" @sizin></fa-icon>
+            <fa-icon [icon]="faMinus" size="2x" *ngIf="menu" @fadeIn></fa-icon>
+        </div>
+
+        <div class="menu" *ngIf="menu" @fadeIn>
+            <ul>
+                <li><a routerLink=""><h2>Home</h2></a></li>
+                <li><a routerLink="/donate" routerLinkActive="active"><h2>Donate</h2></a></li>
+                <li><a routerLink="/live" routerLinkActive="active"><h2>Live</h2></a></li>
+                <li><a routerLink="/contact" routerLinkActive="active"><h2>Contact</h2></a></li>
+            </ul>
+        </div>
 	</ul>
 </nav>

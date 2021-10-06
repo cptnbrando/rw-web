@@ -25,6 +25,7 @@
     }
     .head {
         justify-content: flex-end;
+        text-align: right;
     }
 }
 
@@ -37,18 +38,18 @@
     height: 100%;
     display: flex;
     align-items: center;
+    border-bottom: solid;
+    border-color: lightblue;
+    transition: .4s ease-in-out;
 
     .body {
-        border-bottom: solid;
-        border-color: lightblue;
         margin-left: 50px;
         margin-right: 50px;
         display: flex;
         justify-content: space-around;
         align-items: center;
         flex: auto;
-        padding-bottom: 50px;
-        transition: .6s;
+        padding-bottom: 20px;
         cursor: pointer;
 
         div {
@@ -58,11 +59,12 @@
         .image {
             width: 10rem;
         }
+    }
 
-        &:hover {
-            padding-bottom: 75px;
-            padding-top: 75px;
-        }
+    &:hover {
+        padding-bottom: 50px;
+        padding-top: 50px;
+        color: crimson;
     }
 }
 
@@ -145,6 +147,10 @@ img {
 
         img {
             max-width: 80%;
+        }
+
+        video {
+            max-width: 100%;
         }
     }
 }

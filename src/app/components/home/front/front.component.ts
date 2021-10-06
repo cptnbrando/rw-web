@@ -1,3 +1,4 @@
+import { trigger, transition, style, animate } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 
 declare var Sakura: any;
@@ -6,6 +7,17 @@ declare var Sakura: any;
 	selector: 'app-front',
 	templateUrl: './front.component.html',
 	styleUrls: ['./front.component.scss'],
+    animations: [
+		trigger('fadeIn', [
+			transition(':enter', [
+				style({ opacity: 0 }),
+				animate(
+					'1s ease-in',
+					style({ opacity: 1 })
+				),
+			]),
+		]),
+	],
 })
 export class FrontComponent implements OnInit {
 

@@ -1,21 +1,9 @@
-import { trigger, transition, style, animate } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
 	selector: 'app-quote',
 	templateUrl: './quote.component.html',
 	styleUrls: ['./quote.component.scss'],
-	animations: [
-		trigger('fadeSlideInOut', [
-			transition(':enter', [
-				style({ opacity: 0 }),
-				animate(
-					'1s ease-in',
-					style({ opacity: 1 })
-				),
-			]),
-		]),
-	],
 })
 export class QuoteComponent implements OnInit {
 	quotes: string[] = [
