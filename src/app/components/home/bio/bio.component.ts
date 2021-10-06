@@ -1,15 +1,22 @@
 import { Component, OnInit } from '@angular/core';
+import { faArrowCircleLeft, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
-  selector: 'app-bio',
-  templateUrl: './bio.component.html',
-  styleUrls: ['./bio.component.scss']
+	selector: 'app-bio',
+	templateUrl: './bio.component.html',
+	styleUrls: ['./bio.component.scss'],
 })
 export class BioComponent implements OnInit {
 
-  constructor() { }
+    faX = faArrowCircleLeft;
+    exNum: number = 0;
 
-  ngOnInit(): void {
-  }
+	constructor() {}
 
+	ngOnInit(): void {}
+
+    expand(num: number): void {
+        
+        this.exNum = num;
+    }
 }

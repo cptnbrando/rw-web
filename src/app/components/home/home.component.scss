@@ -1,8 +1,14 @@
 #window {
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
     section {
         height: 100vh;
         width: inherit;
         background-color: white;
+        scroll-snap-align: start;
     }
 
     .panel {
@@ -12,19 +18,20 @@
         z-index: 2;
         position: relative;
     }
+
+    scrollbar-width: medium;
+    scrollbar-color: rgba(214, 161, 2, 0.9) rgba(255, 221, 244, 0.6);
+    scrollbar-shadow-color: inset 0 0 6px rgba(0,0,0,0.3);
+    scroll-margin-block-start: 0;
 }
 
-.background {
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    z-index: 2;
-}
+#feedSection {
+    display: flex;
+    flex-direction: column;
 
-.background:first-of-type {
-    top: 100vh;
+    app-feed {
+        flex: 1;
+    }
 }
 
 footer {
@@ -42,4 +49,25 @@ footer {
         margin-left: 10px;
     }
 }
+
+/* Let's get this party started */
+#window::-webkit-scrollbar {
+    width: 15px;
+}
+ 
+// /* Track */
+#window::-webkit-scrollbar-track {
+    background-color: rgba(255, 221, 244, 0.178);
+    border-radius: 100px;
+}
+ 
+// /* Handle */
+#window::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    border: 6px solid rgba(255, 255, 255, 0.18);
+    border-left: 0;
+    border-right: 0;
+    background-color: rgba(214, 161, 2, 0.8);
+}
+
 

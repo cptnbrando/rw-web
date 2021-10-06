@@ -1,5 +1,8 @@
+<div class="background">
+
+</div>
 <div id="bio">
-    <div class="item">
+    <div class="item" (click)="expand(1)" *ngIf="exNum === 0">
         <div class="body">
             <div class="head">
                 <h1>Miracle Life Ministries</h1>
@@ -9,7 +12,23 @@
             </div>
         </div>
     </div>
-    <div class="item reverse">
+    <div class="ex flex" *ngIf="exNum === 1">
+        <div>
+            <div class="back">
+                <h2>Go back</h2>
+                <fa-icon [icon]="faX" (click)="expand(0)" size="4x"></fa-icon>
+            </div>
+            <h1>Founder and CEO of Miracle Life Ministries</h1>
+            <p>
+                Ms. Ralanda created Miracle Life Ministries in 2015, giving people a free space to worship God and gain His wisdom one day at a time.
+            </p>
+            <div class="image">
+                <img src="../../../../assets/img/portrait1.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="item reverse" (click)="expand(2)" *ngIf="exNum === 0">
         <div class="body">
             <div class="head flex">
                 <h1>Activist For Peace</h1>
@@ -19,13 +38,66 @@
             </div>
         </div>
     </div>
-    <div class="item">
+    <div class="ex flex" *ngIf="exNum === 2" (click)="expand(0)">
+        <div>
+            <div class="back">
+                <h2>Go back</h2>
+                <fa-icon [icon]="faX" (click)="expand(0)" size="4x"></fa-icon>
+            </div>
+            <h1>Community Activist and Organizer</h1>
+            <p>
+                When it comes to present-day issues surrounding injustice and race, the lack of the presence of
+                the evangelical church has been discouraging to people of color and culture, while the absence
+                of their voice has been deafening.
+                <br><br>
+                The May 2020 inhumane killing of George Floyd illuminated the need to take the word of God
+                out of the box and into the streets where the need is great and crucial. Simply put, we are living
+                in a time where fear and darkness threaten to swallow many people who feel lost, whole.
+                <br><br>
+                Since then, She has worked to advocate for mental health resources to be made available to
+                marginalized communities, coordinated with churches to provide trauma counseling resources
+                in June of 2020 and organized fund raisers to support the educational needs of families through
+                the COVID-19 pandemic. Tragically, because people continue to be struck down in before our
+                eyes she has rushed to the front lines to be a much needed resource for God’s light in spaces
+                stricken by anger, grief and tragedy.
+            </p>
+            <div class="image">
+                <img src="../../../../assets/img/portrait2.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="item" (click)="expand(3)" *ngIf="exNum === 0">
         <div class="body">
             <div class="head">
                 <h1>Leader Of People</h1>
             </div>
             <div class="image">
                 <img src="../../../../assets/img/street.png">
+            </div>
+        </div>
+    </div>
+    <div class="ex flex" *ngIf="exNum === 3">
+        <div>
+            <div class="back">
+                <h2>Go back</h2>
+                <fa-icon [icon]="faX" (click)="expand(0)" size="4x"></fa-icon>
+            </div>
+            <h1>Leader Of People</h1>
+            <p>
+                Ms. Ralanda has a heart to encourage, strengthen and empower the next generation through
+                education and personal awareness. For many years she has worked as a youth leader and
+                nurtured many teens and young adults trough small groups, clubs and workshops. She has
+                provided mindfulness education, grief therapy, personal mentorship and many specialized
+                resources for infants and toddlers.
+                <br><br>
+                Ralanda is passionate about changing the live of all God’s children through intercessory prayer,
+                imparting wisdom through of the word of God, encouraging the lost to be found, making
+                disciples, smashing generational strongholds, empowering people and ensuring that none of us
+                parish from lack of knowledge. The power is ours.
+            </p>
+            <div class="image">
+                <img src="../../../../assets/img/portrait2.png">
             </div>
         </div>
     </div>
