@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { QuoteComponent } from './quote/quote.component';
 import { FrontComponent } from './front.component';
 import { NavbarModule } from '../../navbar/navbar.module';
-import { TeximateModule } from 'ngx-teximate';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -14,8 +14,7 @@ import { TeximateModule } from 'ngx-teximate';
   ],
   imports: [
     CommonModule,
-    NavbarModule,
-    TeximateModule
+    NavbarModule
   ],
   exports: [
       FrontComponent

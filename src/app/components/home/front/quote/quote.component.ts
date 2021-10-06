@@ -1,14 +1,23 @@
-import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
-import { fadeInLeft } from 'ng-animate';
-import { Teximate, TextAnimation } from 'ngx-teximate';
-import { interval, Subscription } from 'rxjs';
+import { trigger, transition, style, animate } from '@angular/animations';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
 	selector: 'app-quote',
 	templateUrl: './quote.component.html',
 	styleUrls: ['./quote.component.scss'],
+	animations: [
+		trigger('fadeSlideInOut', [
+			transition(':enter', [
+				style({ opacity: 0 }),
+				animate(
+					'1s ease-in',
+					style({ opacity: 1 })
+				),
+			]),
+		]),
+	],
 })
-export class QuoteComponent implements OnInit, OnDestroy {
+export class QuoteComponent implements OnInit {
 	quotes: string[] = [
 		'This is the generation',
 		'We will rise together',
@@ -18,36 +27,17 @@ export class QuoteComponent implements OnInit, OnDestroy {
 		'The power is ours',
 	];
 
-    quote: string = '';
-    timer!: Subscription;
-
-    @ViewChild(Teximate) teximate!: Teximate;
-
-    enterAnimation: TextAnimation = {
-        id: 'custom',
-        animation: fadeInLeft,
-        delay: 100,
-        type: 'letter'
-    };
+	quote: string = '';
 
 	constructor() {}
-
-    ngOnDestroy(): void {
-        // this.timer.unsubscribe();
-    }
-
+    
 	ngOnInit(): void {
         this.quote = this.getRandomQuote();
-    }
-
-	changeQuote(): string {
-		this.quote = this.getRandomQuote();
-        return this.quote;
 	}
 
-    getRandomQuote(): string {
-        let newQuote = this.quotes[Math.floor(Math.random() * this.quotes.length)];
-        while(this.quote === newQuote) newQuote = this.quotes[Math.floor(Math.random() * this.quotes.length)];
-        return newQuote;
-    }
+	getRandomQuote(): string {
+		const newQuote =
+			this.quotes[Math.floor(Math.random() * this.quotes.length)];
+		return newQuote;
+	}
 }

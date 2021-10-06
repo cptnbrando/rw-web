@@ -32,6 +32,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
+    width: 100%;
 
     div {
         flex: 1;
@@ -50,9 +51,10 @@
         height: 100%;
 		width: 100%;
         flex: 0.8;
+        object-fit: contain;
 	}
     
-	h1 {
+	.retroshadow {
         align-self: flex-end;
         font-family: 'Fleur De Leah', cursive;
         background: -webkit-linear-gradient(20deg, #FF033E, #861322);
@@ -66,6 +68,7 @@
 		margin-left: 2rem;
         padding-right: 1rem;
 		margin-bottom: 3rem;
+        text-shadow: unset;
 	}
 }
 
@@ -97,21 +100,36 @@
 	border-left: 90vw solid transparent;
 }
 
-.retroshadow {
-	text-shadow: unset;
-}
-
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
     #home {
         flex-direction: column;
         justify-content: center;
 
         div {
             justify-content: center;
+            align-items: flex-end;
+        }
+        
+        img {
+            flex: 1.5;
+            height: auto;
         }
 
         div:first-child {
-            display: none;
+            position: absolute;
+
+            h1 {
+                font-size: 3em;
+                align-self: flex-start;
+                text-align: center;
+                padding: 0;
+                margin-left: 0;
+                margin-top: 10vh;
+                width: 100%;
+                padding-left: 10px;
+                padding-right: 10px;
+                line-height: 85%;
+            }
         }
     }
 }

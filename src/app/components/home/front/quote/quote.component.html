@@ -1,1 +1,1 @@
-<teximate [text]="quote" [enter]="enterAnimation"></teximate>
+<span *ngIf="quote !== ''" [@fadeSlideInOut]>{{quote}}</span>
