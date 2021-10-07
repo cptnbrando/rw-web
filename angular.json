@@ -34,7 +34,7 @@
               "src/styles.scss"
             ],
             "scripts": [
-                "node_modules/sakura-js/dist/sakura.min.js"
+              "node_modules/sakura-js/dist/sakura.min.js"
             ]
           },
           "configurations": {
@@ -104,6 +104,15 @@
               "src/styles.scss"
             ],
             "scripts": []
+          }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "/rw-web/",
+            "repo": "https://github.com/cptnbrando/rw-web.git",
+            "name": "cptnbrando",
+            "email": "brandon.dcruz@revature.net"
           }
         }
       }
