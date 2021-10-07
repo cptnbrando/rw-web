@@ -1,5 +1,6 @@
 import { trigger, transition, style, animate } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
+import { AppComponent } from 'src/app/app.component';
 
 declare var Sakura: any;
 
@@ -20,10 +21,11 @@ declare var Sakura: any;
 	],
 })
 export class FrontComponent implements OnInit {
+    
+    href: string = AppComponent.href;
+    sakura: any;
 
 	constructor() {}
-
-    sakura: any;
 
 	ngOnInit(): void {
         this.initSakura();

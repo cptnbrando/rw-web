@@ -1,6 +1,7 @@
 import { trigger, style, transition, animate } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { faArrowCircleLeft } from '@fortawesome/free-solid-svg-icons';
+import { AppComponent } from 'src/app/app.component';
 
 @Component({
 	selector: 'app-bio',
@@ -42,6 +43,8 @@ import { faArrowCircleLeft } from '@fortawesome/free-solid-svg-icons';
 	],
 })
 export class BioComponent implements OnInit {
+
+    href: string = AppComponent.href;
 	faX = faArrowCircleLeft;
 	exNum: number = 0;
 
