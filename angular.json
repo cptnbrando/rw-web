@@ -111,10 +111,10 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "baseHref": "/rw-web/",
-            "repo": "https://github.com/cptnbrando/rw-web.git",
             "name": "cptnbrando",
-            "email": "brandon.dcruz@revature.net"
+            "email": "brandon.dcruz@revature.net",
+            "cname": "ralandaprays.com",
+            "baseHref": "/"
           }
         }
       }
