@@ -2,15 +2,15 @@
     <navbar></navbar>
     <div id="front">
         <div id="home">
-            <div>
+            <div id="quote">
                 <h1 class="retroshadow" @fadeIn><app-quote></app-quote></h1>
             </div>
             <div>
-                <img @fadeIn src="{{href}}/assets/img/rw1.png">
+                <!-- <img @fadeIn src="{{href}}/assets/img/rw1.png"> -->
             </div>
         </div>
-        <div id="shapes" class="ground">
-            <div id="triangle"></div>
+        <div id="shapes">
+            <app-painting></app-painting>
         </div>
         <div id="sakuraLeaves" class="ground"></div>
     </div>

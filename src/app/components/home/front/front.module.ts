@@ -3,14 +3,15 @@ import { CommonModule } from '@angular/common';
 import { QuoteComponent } from './quote/quote.component';
 import { FrontComponent } from './front.component';
 import { NavbarModule } from '../../navbar/navbar.module';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PaintingComponent } from './painting/painting.component';
 
 
 
 @NgModule({
   declarations: [
       FrontComponent,
-      QuoteComponent
+      QuoteComponent,
+      PaintingComponent
   ],
   imports: [
     CommonModule,

@@ -1,0 +1,53 @@
+.keyart {
+    height: 0;
+    width: 100%;
+    padding-top: 105%;
+    margin: 0;
+    z-index: 1;
+}
+#keyart0 {
+    background-image: url('http://res.cloudinary.com/irrelevantevan/image/upload/v1495238903/Vmedgv5_e1usk2.png');
+}
+#keyart1 {
+    background-image: url('http://res.cloudinary.com/irrelevantevan/image/upload/v1495238886/9mGZWCF_bqjlla.png');
+}
+#keyart2 {
+    background-image: url('http://res.cloudinary.com/irrelevantevan/image/upload/v1495238912/Jgp0AI9_qvpa46.png');
+}
+#keyart3 {
+    background-image: url('http://res.cloudinary.com/irrelevantevan/image/upload/v1495238918/mTFTQX2_nbd2xd.png');
+}
+#keyart4 {
+    background-image: url('http://res.cloudinary.com/irrelevantevan/image/upload/v1495238925/HTmjDSS_ndkyzk.png');
+}
+#keyart5 {
+    background-image: url('http://res.cloudinary.com/irrelevantevan/image/upload/v1495238948/1TblRBg_ylgf7t.png');
+}
+#keyart6 {
+    background-image: url('http://res.cloudinary.com/irrelevantevan/image/upload/v1495238941/FQ5YCKc_dlw7v4.png');
+}
+#keyart7 {
+    background-image: url('http://res.cloudinary.com/irrelevantevan/image/upload/v1495238932/5Je9xgj_iyg453.png');
+}
+#keyart8 {
+    background-image: url('http://res.cloudinary.com/irrelevantevan/image/upload/v1495238937/L400Rdp_z7s3kz.png');
+}
+#keyart9 {
+    background-image: url('http://res.cloudinary.com/irrelevantevan/image/upload/v1495238953/lPDpnVg_yqgvlb.png');
+}
+.parallax {
+    position: fixed;
+}
+.keyart {
+    background-position: bottom center;
+    background-size: cover;
+    width: 100%;
+    position: absolute;
+}
+
+@media screen and (max-width: 900px) {
+    .keyart {
+        height: 100%;
+        padding-top: 40%;
+    }
+}
